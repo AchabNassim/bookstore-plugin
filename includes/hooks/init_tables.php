@@ -1,7 +1,7 @@
 <?php
 
-include WP_PLUGIN_DIR . "/book-store/includes/instances/Category.php";
-include WP_PLUGIN_DIR . "/book-store/includes/instances/Book.php";
+include plugin_dir_path(__FILE__) . "../instances/Category.php";
+include plugin_dir_path(__FILE__) . "../instances/Book.php";
 
 // Create database tables
 function init_database() {

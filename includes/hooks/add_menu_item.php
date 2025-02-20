@@ -8,12 +8,12 @@ function bookstore_admin_menu() {
 
 // callback to render menu page
 function bookstore_admin_menu_main() {
-    include WP_PLUGIN_DIR . "/book-store/templates/books-view.php";
+    include plugin_dir_path(__FILE__) . "../../templates/books-view.php";
 }
 
 // callback to render submenu page
 function bookstore_admin_sub_category () {
-    include WP_PLUGIN_DIR . "/book-store/templates/categories-view.php";
+    include plugin_dir_path(__FILE__) . "../../templates/categories-view.php";
 }
 
 // load scripts for menu pages
