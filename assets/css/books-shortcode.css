@@ -1,0 +1,69 @@
+/* This is a template that imitates react material UI cards. */
+.books-container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 2px;
+    font-size: 1.05rem;
+    margin: 1rem auto;
+}
+
+.book-card {
+    flex: 1 1 calc(40% - 20px);
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 420px;
+}
+
+.book-img {
+    width: 100%;
+    height: 180px;
+    display: block;
+}
+
+.book-card-content {
+    padding: 15px;
+}
+
+.book-card-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.book-card-content p {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+}
+
+.book-card-content .description {
+    font-size: 0.8em;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .books-container {
+        width: 80%;
+    }
+    .book-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .books-container {
+        width: 80%;
+    }
+    .book-card {
+        flex: 1 1 100%;
+    }
+}

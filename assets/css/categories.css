@@ -1,0 +1,165 @@
+#categoriesHeader {
+    text-align: center;
+    margin: 0.2rem auto;
+}
+
+#container {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 99%;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.formContainer, #controlsContainer {
+    padding: 0.1rem;
+    text-align: center;
+    min-height: 40vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.formContainer > form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputField, .submitButton, .ctrlButton, .cancelButton {
+    padding: 0.4rem;
+    width: 40%;
+    height: 2.6rem;
+    margin: 0.4rem 0;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    background: white;
+    transition: 0.2s linear;
+}
+
+.ctrlButton:hover , .ctrlButton:focus, .inputField:hover, .submitButton:hover, .cancelButton {
+    background: rgba(255, 255, 255, 0.511);
+}
+
+#categoriesTableContainer {
+    min-height: 30vh;
+    max-height: 60vh;
+    width: 50vw;
+    padding: 0.1rem;
+    overflow-y: scroll;
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    color: #1d2327;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* overflow: hidden; */
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #1d2327;
+    font-weight: 600;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+td {
+    vertical-align: top;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #1d2327;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tdCategory {
+    background-color: rgba(0, 0, 0, 0.025);
+    font-weight: 600;
+    color: #2c3e50cd;
+}
+
+.tdSubcategory {
+    background-color: rgba(0, 0, 0, 0.001);
+    font-style: italic;
+    color: #34495e;
+}
+
+.success {
+    color: green;
+}
+
+.failure {
+    color: red;
+}
+
+.editableTd {
+    /* border: 1px solid rgba(0, 0, 0, 0.374); */
+    color: #2c3e50;
+}
+
+#modal {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    animation: slideUp 0.5s ease-in-out forwards, fadeOut 0.5s ease-in-out 1s forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        bottom: -100px;
+    }
+    100% {
+        bottom: 20px;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
